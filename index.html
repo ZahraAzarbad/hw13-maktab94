@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW13</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="w-screen h-screen flex items-center justify-center">
+
+    <div id="login-page" class="flex flex-col justify-center items-center bg-stone-400 p-3 rounded-md">
+
+        <div class="email flex flex-col gap-2">
+            <label for="email">User Name:</label>
+            <input id="email-input" class="email-input px-1 py-2 rounded-sm outline-none" type="email" name="email" placeholder="Email">
+        </div>
+
+        <div class="password flex flex-col gap-2">
+            <label class="mt-2" for="password">Password:</label>
+            <input class="password-input px-1 py-2 rounded-sm outline-none" type="password" name="password" placeholder="Password">
+        </div>
+        
+       <div class="btns  flex justify-between gap-5 m-3">
+        <button id="login" class="bg-green-600 text-white rounded-md cursor-pointer p-3 py-1">Log in</button>
+        <button id="signup" class="bg-green-600 text-white rounded-md cursor-pointer px-3 py-1">Sign up</button>
+       </div>
+
+    </div>
+
+
+    <div id="signup-page" class="flex flex-col justify-center items-center bg-stone-400 p-3 rounded-md hidden">
+
+        <div class="email flex flex-col gap-2">
+            <label for="email">User Name:</label>
+            <input class="px-1 py-2 rounded-sm outline-none" type="email" name="email" placeholder="Email">
+        </div>
+
+        <div class="password flex flex-col gap-2">
+            <label class="mt-2" for="password">Password:</label>
+            <input class="px-1 py-2 rounded-sm outline-none" type="password" name="password" placeholder="Password">
+        </div>
+
+        <div class="password flex flex-col gap-2">
+            <label class="mt-2" for="password">Confirm Password:</label>
+            <input class="px-1 py-2 rounded-sm outline-none" type="password" name="password" placeholder="Password">
+        </div>
+        
+       <div class="btns  flex flex-col justify-between gap-2 mt-3">
+        <button class="bg-green-600 text-white rounded-md cursor-pointer p-3 py-1">Enter</button>
+
+        <a href="#" class=" cursor-pointer px-3 py-1">Back To Log in</a>
+
+       </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
