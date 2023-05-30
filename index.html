@@ -19,7 +19,7 @@
 
         <div class="password flex flex-col gap-2">
             <label class="mt-2" for="password">Password:</label>
-            <input class="password-input px-1 py-2 rounded-sm outline-none" type="password" name="password" placeholder="Password">
+            <input id="password-input" class=" px-1 py-2 rounded-sm outline-none" type="password" name="password" placeholder="Password">
         </div>
         
        <div class="btns  flex justify-between gap-5 m-3">
@@ -30,27 +30,32 @@
     </div>
 
 
-    <div id="signup-page" class="flex flex-col justify-center items-center bg-stone-400 p-3 rounded-md">
+    <div id="signup-page" class="flex flex-col justify-center items-center bg-stone-400 p-3 rounded-md hidden">
 
         <div class="email flex flex-col gap-2">
-            <label for="email">User Name:</label>
-            <input class="px-1 py-2 rounded-sm outline-none" type="email" name="email" placeholder="Email">
+            <label for="text">Full Name:</label>
+            <input id="signup-input-name" class="px-1 py-2 rounded-sm outline-none" type="text" name="text" placeholder="Your Name">
+        </div>
+
+        <div class="email flex flex-col gap-2 mt-3">
+            <label for="email">Email:</label>
+            <input id="signup-input-email" class="px-1 py-2 rounded-sm outline-none" type="email" name="email" placeholder="Email">
         </div>
 
         <div class="password flex flex-col gap-2">
             <label class="mt-2" for="password">Password:</label>
-            <input class="px-1 py-2 rounded-sm outline-none" type="password" name="password" placeholder="Password">
+            <input id="signup-input-password" class="px-1 py-2 rounded-sm outline-none" type="password" name="password" placeholder="Password">
         </div>
 
         <div class="password flex flex-col gap-2">
             <label class="mt-2" for="password">Confirm Password:</label>
-            <input class="px-1 py-2 rounded-sm outline-none" type="password" name="password" placeholder="Password">
+            <input id="signup-input-confirm-password" class="px-1 py-2 rounded-sm outline-none" type="password" name="password" placeholder="Password">
         </div>
         
        <div class="btns  flex flex-col justify-between gap-2 mt-3">
-        <button class="bg-green-600 text-white rounded-md cursor-pointer p-3 py-1">Enter</button>
+        <button id="signup-enter-btn" class="bg-green-600 text-white rounded-md cursor-pointer p-3 py-1">Enter</button>
 
-        <a href="#" class=" cursor-pointer px-3 py-1">Back To Log in</a>
+        <a href="#" id="back-to-login" class=" cursor-pointer px-3 py-1">Back To Log in</a>
 
        </div>
 
