@@ -1,3 +1,4 @@
+//get inputs
 const loginBtn = document.getElementById("login");
 const signupBtn = document.getElementById("signup");
 const emailInput = document.getElementById("email-input");
@@ -14,7 +15,7 @@ const signupInputConfirmPassword = document.getElementById(
 const signupEnterBtn = document.getElementById("signup-enter-btn");
 
 
-
+//press log in btn 
 loginBtn.addEventListener("click", (e) => {
   const em = emailInput.value;
   const pas = passwordInput.value;
@@ -31,23 +32,26 @@ promise
 
     users.forEach((user) => {
       if (user.email === em && user.password === pas) {
-        window.location = `http://127.0.0.1:5500/weather.html`;
+        window.location = `http://127.0.0.1:5500/weather/weather.html`;
       }
     });
   });
   
 });
 
-
+//press sign up btn
 signupBtn.addEventListener("click", (e) => {
   signupPage.classList.remove("hidden");
   loginPage.classList.add("hidden");
 });
+
+//press back to log in link
 backTologin.addEventListener("click", (e) => {
   loginPage.classList.remove("hidden");
   signupPage.classList.add("hidden");
 });
 
+//press sign up btn in signing page
 signupEnterBtn.addEventListener("click", (e) => {
   if (signupInputPassword.value !== signupInputConfirmPassword.value) {
     return;
@@ -70,6 +74,7 @@ else{
   })
 });
 
+// a function for push new user ,who sign up, to API
 function insertUser(obj){
   const post = fetch(`https://6474eff27de100807b1bf8be.mockapi.io/auth/users`,{
     method:'POST',
@@ -80,11 +85,12 @@ function insertUser(obj){
     body:JSON.stringify(obj)
   });
   post.then((response)=>{
-        window.location = `http://127.0.0.1:5500/weather.html`;
+        window.location = `http://127.0.0.1:5500/weather/weather.html`;
   })
 
 }
 
+//check new users email invalid or not
 async function checkEmail(email){
   let valid = true;
   const promise = await fetch(`https://6474eff27de100807b1bf8be.mockapi.io/auth/users`);
