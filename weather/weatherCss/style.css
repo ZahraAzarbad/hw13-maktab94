@@ -10,8 +10,19 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(67, 119, 248);
+  position: relative;
+  
 
+}
+
+#log-out{
+  padding: 5px 10px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top:25px;
+  right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .container{
@@ -42,6 +53,7 @@ body{
   font-size: 24px;
   color: cornflowerblue;
   border-bottom: 1px solid rgb(210, 210, 210);
+
 }
 
 .set-locations-wrapper{
@@ -70,7 +82,6 @@ body{
   width: 100%;
   height: 1px;
   background-color: rgb(202, 202, 202);
-  position: relative;
 }
 
 .set-locations-wrapper .line .text{
@@ -102,6 +113,7 @@ body{
   border-radius: 5px ;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .state-city-wrapper header{
@@ -135,8 +147,8 @@ body{
 }
 
 .weather-icon{
-  width: 150px;
-  height: 90px;
+  width: 100px;
+  height: 50px;
   overflow: hidden;
 }
 
@@ -194,4 +206,24 @@ body{
 
 .hidden{
   display: none;
+}
+
+#backToSearch{
+  cursor: pointer;
+}
+
+.search-cities{
+  position: relative;
+}
+
+.history{
+  width: 100%;
+  position: absolute;
+  top:100%;
+background-color: rgb(131, 155, 182);
+visibility: visible;
+}
+
+.hidden{
+  visibility: hidden;
 }

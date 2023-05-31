@@ -32,6 +32,7 @@ promise
 
     users.forEach((user) => {
       if (user.email === em && user.password === pas) {
+        localStorage.setItem("user",JSON.stringify(user));
         window.location = `http://127.0.0.1:5500/weather/weather.html`;
       }
     });
@@ -65,8 +66,9 @@ if(valid){
     email: signupInputEmail.value,
     password: signupInputPassword.value,
   };
+  localStorage.setItem("user",JSON.stringify(user))
   insertUser(user);
-  
+ 
 }
 else{
   alert("this email invalid!!");
